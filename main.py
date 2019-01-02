@@ -5,20 +5,81 @@ This is the template server side for ChatBot
 from bottle import route, run, template, static_file, request
 import json
 import random
+import pymysql
 import requests
 
+connection = pymysql.connect(host='localhost',
+                             user='root',
+                             password='davidzerah28#05',
+                             db='cows',
+                             charset='utf8',
+                             cursorclass=pymysql.cursors.DictCursor)
 
 
 
+def cows_data():
+        with connection.cursor() as cursor:
+            sql = "SELECT description FROM disease"
+            cursor.execute(sql)
+            result = cursor.fetchall()
+            #print(json.dumps(result))
+            arr = []
+            for elem in result:
+                arr.append(elem["description"])
+            print(arr)
+            print(random.choice(arr))
 
+            answer = "I think I have " + random.choice(arr)
+            return answer
+
+
+def symptoms(input):
+    with connection.cursor() as cursor:
+        sql = "SELECT name FROM disease WHERE description='{}'".format(input)
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        arr = []
+        symptom = ""
+        for elem in result:
+            arr.append(elem["name"])
+        for elem in arr:
+            symptom += elem + ", "
+        print(symptom)
+        answer = "Because I have: " + symptom
+        return answer
+
+
+
+heart_list = ["heart", "beat", "beating", "heartbeat", "heartrate", "rate"]
+body_list = ["body condition", "body", "condition"]
+greeting_list = ["hey", "hi", "hello"]
 drink_list = ["water", "drink", "liter"]
 food_list = ["eat", "food"]
 weight_list = ["weight", "pound", "weigh"]
-weather_list = ["weather", "forecast", "temp", "degree", "celcius", "sun", "cloud", "rain", "sky", "hot", "cold"]
-city_list = ["paris", "london", "tel aviv", "new york", "jerusalem", ""]
-end_conversation_list = ["bye", "see you", "to leave", "to go"]
+feeling_list = ["how are", "feel", "feelings", "sick"]
+pregnant_list = ["baby", "pregnant", "pregnancy"]
+walking_list = ["steps", "step", "walk", "walking", "out", "outside"]
+production_list = ["milk", "production"]
 
-can_list = ["can you", "possible", "can I"]
+
+
+def temp():
+    answer = "High: 39.2°C"
+    return answer
+
+
+def heart():
+    answer = "67 beats per minute, my heart rate is okay"
+    return answer
+
+def body():
+    answer = "My body condition score is: 3/10"
+    return answer
+
+
+def greeting():
+    answer_list = ["Hey Diego!", "Hi!"]
+    return random.choice(answer_list)
 
 def drink():
     answer_list = ["I drunk 12L today!"]
@@ -37,22 +98,23 @@ def do():
     return random.choice(answer_list)
 
 
-def start_conversation():
-    answer_list = ["Hello dear!", "Hi my friend!", "What's up!", "Hey! I'm happy to see you again!", "How are you today ?", "Hey bro!"]
-    return random.choice(answer_list)
+def insemination():
+    answer = "I had insemination 10 months ago."
+    return answer
 
-def end_conversation():
-    answer_list = ["Do you really want to end the conversation?", "I hope you'll come and talk soon!", "No problem, see you next time!", "Okay, we'll continue our conversation later!"]
-    return random.choice(answer_list)
-
-def how_are_you():
-    answer_list = ["I'm good thank you!", "I am a bit stressed"]
-    return random.choice(answer_list)
+def pregnant():
+    answer = "I have 10% chance of being pregnant."
+    return answer
 
 
-def can_you():
-    answer_list = ["Oh no...", "So boring...", "Don't make me waist my time"]
-    return random.choice(answer_list)
+def walking():
+    answer = "I spent all the day in the stable."
+    return answer
+
+def production():
+    answer = "I produced 13.7L today."
+    return answer
+
 
 def error_message():
     answer_list = ["Sorry, I can't help you.", "Sorry, I think I cannot help you.", "Sorry, ask another robot who may help you!"]
@@ -65,20 +127,34 @@ def not_english():
 
 def bot_message(input):
     input = input.lower()
-    if input.startswith("how are"):
-        return how_are_you()
+    if any(elem in input for elem in greeting_list):
+        return greeting()
+    elif "temperature" in input:
+        return temp()
+    elif any(elem in input for elem in heart_list):
+        return heart()
+    elif any(elem in input for elem in body_list):
+        return body()
+    elif any(elem in input for elem in feeling_list):
+        return cows_data()
+    elif "why" in input:
+        return symptoms(input)
+    elif any(elem in input for elem in walking_list):
+        return walking()
+    elif any(elem in input for elem in pregnant_list):
+        return pregnant()
     elif any(elem in input for elem in drink_list):
         return drink()
     elif any(elem in input for elem in food_list):
         return food()
     elif any(elem in input for elem in weight_list):
         return weight()
+    elif any(elem in input for elem in production_list):
+        return production()
     elif "did you do" in input:
         return do()
-    elif any(elem in input for elem in end_conversation_list):
-        return end_conversation()
-    elif any(elem in input for elem in can_list):
-        return can_you()
+    elif "insemination" in input:
+        return insemination(input)
     else:
         return error_message()
 
@@ -113,7 +189,7 @@ def stylesheets(filename):
     return static_file(filename, root='css')
 
 
-@route('/images/<filename:re:.*\.(jpg|png|gif|ico)>', method='GET')
+@route('/images/<filename:re:.*\.(jpg|png|gif|ico|jpeg)>', method='GET')
 def images(filename):
     return static_file(filename, root='images')
 

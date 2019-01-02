@@ -29,7 +29,7 @@ ChatBot.start = function () {
         ChatBot.bindErrorHandlers();
         ChatBot.initSpeechConfig();
         ChatBot.bindUserActions();
-        ChatBot.write("Hey Diego !", "cow");
+        ChatBot.write("MEUUUUUUU", "cow");
     });
 };
 

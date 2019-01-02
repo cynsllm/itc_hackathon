@@ -1,6 +1,44 @@
 body{
-    background: white;
-    font-family:'Roboto Mono'
+    font-family: 'Viga', sans-serif;
+    background-color: whitesmoke;
+}
+
+.navbar{
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: #65b20c;
+    color: whitesmoke;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.greeting{
+    font-family: 'Viga', sans-serif;
+    font-size: 50px;
+}
+
+.weather_icon{
+    width: 50px;
+    margin: 10px;
+    position: absolute;
+    right: 250px;
+}
+
+.temp{
+    margin-top: 20px;
+    position: absolute;
+    right: 180px;
+    font-family: 'Viga', sans-serif;
+    font-size: 20px;
+}
+
+.date{
+    margin-top: 40px;
+    font-family: 'Viga', sans-serif;
+    font-size: 20px;
 }
 
 .chat-box.shadowed{
@@ -18,8 +56,8 @@ body{
     right:10%;
     background-color: green;
     color: white;
-    width: 10%;
-    height: 7%;
+    width: 50px;
+    height: 50px;
     font-size: 100%
 }
 
