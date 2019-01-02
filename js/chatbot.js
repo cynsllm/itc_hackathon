@@ -10,7 +10,7 @@ var ChatBot = {};
 //The server path will be used when sending the chat message to the server.
 //todo replace with your server path if needed
 ChatBot.SERVER_PATH = "http://localhost:7000";
-ChatBot.DEFAULT_ANIMATION = "waiting";
+//ChatBot.DEFAULT_ANIMATION = "waiting";
 //The animation timeout is used to cut the current running animations when a new animations starts
 ChatBot.animationTimeout;
 //Holds the speech synthesis configuration like language, pich and rate
@@ -29,7 +29,7 @@ ChatBot.start = function () {
         ChatBot.bindErrorHandlers();
         ChatBot.initSpeechConfig();
         ChatBot.bindUserActions();
-        ChatBot.write("Hello, my name is cow!", "cow");
+        ChatBot.write("Hey Diego !", "cow");
     });
 };
 
@@ -95,7 +95,7 @@ ChatBot.sendMessage = function () {
             //Sending the user line to the server using the POST method
             $.post(ChatBot.SERVER_PATH + "/chat", {"msg": chatInput.val()}, function (result) {
                 if (typeof result != "undefined" && "msg" in result) {
-                    ChatBot.setAnimation(result.animation);
+                    //ChatBot.setAnimation(result.animation);
                     ChatBot.write(result.msg, "cow");
                 } else {
                     //The server did not erred but we got an empty result (handling as error)
@@ -151,7 +151,7 @@ ChatBot.handleServerError = function (errorThrown) {
         actualError = " ( " + errorThrown + " ) ";
     }
     ChatBot.write("Sorry, there seems to be an error on the server. Let's talk later. " + actualError, "cow");
-    ChatBot.setAnimation("crying");
+    //ChatBot.setAnimation("crying");
     $(".chat-send").removeClass("loading");
 };
 
