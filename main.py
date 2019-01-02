@@ -11,20 +11,9 @@ import requests
 
 
 
-<<<<<<< HEAD
-link_list = {
-    "skirt": "https://www.asos.com/yellow-skirt", "dress": "https://www.asos.com/pink-dress", "jean":"https://www.asos.com/blue-jeans", "pant":"https://www.asos.com/black-pant", "jacket":"https://www.asos.com/leather-jacket", "accessory":"https://www.asos.com/soft-hat", "shirt":"https://www.asos.com/white-shirt", "coat":"https://www.asos.com/red-coat", "sweat":"https://www.asos.com/grey-sweat", "shoe":"https://www.asos.com/leather-shoes", "sneaker":"https://www.asos.com/nike-running",
-    "clothe":"https://www.asos.com", "sock":"https://www.asos.com/multicolor-socks", "boxer":"https://www.asos.com/men-boxers", "suit":"https://www.asos.com/blue-suit", "blouse":"https://www.asos.com/oversized-blouse", "tie":"https://www.asos.com/red-tie", "top":"https://www.asos.com/night-tops", "trouser":"https://www.asos.com/black-trousers", "short":"https://www.asos.com/sexy-short", "glove":"https://www.asos.com/leather-gloves", "jumper":"https://www.asos.com/white-jumper",
-    "swim":"https://www.asos.com/swimsuits", "bra":"https://www.asos.com/lingerie", "boot":"leather-boots"
-}
-like_list = ["yes", "wow", "beautiful", "amazing", "like", "nice", "cool", "great", "good", "much", "yeah", "yep", "love"]
-dislike_list = ["no", "not", "aweful", "horrible", "bad", "nope", "dislike", "hate"]
-curse_list = ["fuck", "bitch", "shit", "piss", "dick", "asshole", "bastard", "damn"]
-=======
 drink_list = ["water", "drink", "liter"]
 food_list = ["eat", "food"]
 weight_list = ["weight", "pound", "weigh"]
->>>>>>> 96b2367f0deb3c71f90620d1ab202bd5f75c9987
 weather_list = ["weather", "forecast", "temp", "degree", "celcius", "sun", "cloud", "rain", "sky", "hot", "cold"]
 city_list = ["paris", "london", "tel aviv", "new york", "jerusalem", ""]
 end_conversation_list = ["bye", "see you", "to leave", "to go"]
@@ -76,28 +65,6 @@ def not_english():
 
 def bot_message(input):
     input = input.lower()
-<<<<<<< HEAD
-    global counter
-    if counter == 0:
-        counter += 1
-        return greetings(input)
-    elif any(elem in input for elem in link_list):
-        return find_items(input)
-    elif "you like" in input and input.endswith("?"):
-        return do_you_like(input)
-    elif any(elem in input for elem in like_list):
-        return result(input)
-    elif any(elem in input for elem in dislike_list):
-        return result(input)
-    elif any(elem in input for elem in curse_list):
-        return swear_words(input)
-    elif any(elem in input for elem in city_list):
-        return weather_2(input)
-    elif any(elem in input for elem in weather_list):
-        return weather_1()
-    elif any(elem in input for elem in hello_list):
-        return start_conversation()
-=======
     if input.startswith("how are"):
         return how_are_you()
     elif any(elem in input for elem in drink_list):
@@ -108,7 +75,6 @@ def bot_message(input):
         return weight()
     elif "did you do" in input:
         return do()
->>>>>>> 96b2367f0deb3c71f90620d1ab202bd5f75c9987
     elif any(elem in input for elem in end_conversation_list):
         return end_conversation()
     elif any(elem in input for elem in can_list):
