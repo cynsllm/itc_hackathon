@@ -1,0 +1,22 @@
+body{
+    background: white;
+    font-family:'Roboto Mono'
+}
+
+.chat-box.shadowed{
+    display: none;
+    margin-top: 100px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.myBtn {
+    position: absolute;
+    top: 50%;
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 50px;
+}
