@@ -25,46 +25,100 @@ body{
     transform: translateY(-50%) translateX(-50%);
     left: 50%;
     position: absolute;
-    background-color:#65b20c;
+
 }
 
 
+.chat-box.shadowed{
+    padding:0px;
+}
 
 .chat-window-header{
     font-size: 20px;
     line-height: 1.6em;
-
+    position:relative;
    background: rgb(0, 0, 0); /* The Fallback */
    background: rgba(0, 0, 0, 0.8);
 
 }
 
 .chat-screen{
-	width:500px;
+	width: 100%;
 	height:400px;
-	background-color:white;
-	border: 1px solid #999;
+	background-color: whitesmoke;
 	padding: 10px;
     overflow-y: scroll;
 }
 
 .chat-screen .sender{
-	color:green;
     margin-right: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
 }
 
-.chat-screen .sender.boto{
-	color:blue;
+.chat-screen .sender.cow{
+	padding-top: 15px;
+    padding-left: 15px;
+    color:white;
 }
 
+.chat-user{
+    height: 80px;
+    background-color: #0078ff;
+}
+
+.name{
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    color: white;
+}
+
+.msg-row{
+    background-color: #a2e6f4;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    margin-bottom: 10px;
+        width: 400px;
+    margin-left: 80px;
+}
+
+.msg-row-cow{
+    background-color: white;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    margin-bottom: 10px;
+    width: 400px;
+    margin-left: 0px;
+}
+
+.msg{
+    padding-top: 15px;
+}
+
+.bot-msg{
+    padding-top: 15px;
+    color: grey;
+    position: absolute;
+    right: 400px;
+}
 
 .chat-input{
 	width: 380px;
     font-size: 20px;
-    margin-top: 10px;
-    border: 1px solid #999;
+    border: none;
     outline: none;
-
+    height: 50px;
+}
+.send{
+    width: 40px;
+}
+.profile {
+    width: 50px;
+    margin-top: 15px;
+    margin-left: 20px;
 }
 
 .chat-send{

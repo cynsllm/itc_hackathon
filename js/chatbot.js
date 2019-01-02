@@ -29,7 +29,7 @@ ChatBot.start = function () {
         ChatBot.bindErrorHandlers();
         ChatBot.initSpeechConfig();
         ChatBot.bindUserActions();
-        ChatBot.write("MEUUUUUUU", "cow");
+        ChatBot.write("Meuuuu", "cow");
     });
 };
 
@@ -120,16 +120,30 @@ $.ajax("/test",{
 
 
 ChatBot.write = function (message, sender, emoji) {
-    //Only boto's messages should be heard
-    if (sender == "cow" && ChatBot.speechEnabled) {
-        ChatBot.speak(message);
+    if(sender == "me"){
+        if (sender == "cow" && ChatBot.speechEnabled) {
+            ChatBot.speak(message);
+        }
+        var chatScreen = $(".chat-screen");
+        sender = $("<div />").addClass("sender").addClass(sender);
+        var msgContent = $("<div />").addClass("msg").text(message);
+        var newLine = $("<div />").addClass("msg-row");
+        newLine.append(sender).append(msgContent);
+        chatScreen.append(newLine);
     }
-    var chatScreen = $(".chat-screen");
-    sender = $("<span />").addClass("sender").addClass(sender).text(sender + ":");
-    var msgContent = $("<span />").addClass("msg").text(message);
-    var newLine = $("<div />").addClass("msg-row");
-    newLine.append(sender).append(msgContent);
-    chatScreen.append(newLine);
+    //Only boto's messages should be heard
+
+    else{
+        if (ChatBot.speechEnabled) {
+            ChatBot.speak(message);
+        }
+        var chatScreen = $(".chat-screen");
+        sender = $("<div />").addClass("sender").addClass(sender).text(sender + ":");
+        var msgContent = $("<div />").addClass("bot-msg").text(message);
+        var newLine = $("<div />").addClass("msg-row-cow");
+        newLine.append(sender).append(msgContent);
+        chatScreen.append(newLine);
+    }
 };
 
 

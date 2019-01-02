@@ -134,7 +134,7 @@ def bot_message(input):
     input = input.lower()
     if any(elem in input for elem in greeting_list):
         return greeting()
-    elif "temperature" in input:
+    elif "temperature" or "temp" in input:
         return temp()
     elif any(elem in input for elem in heart_list):
         return heart()
@@ -143,6 +143,8 @@ def bot_message(input):
     elif any(elem in input for elem in feeling_list):
         return feeling()
     elif "why" in input:
+        return cows_data()
+    elif "sick" in input:
         return cows_data()
     elif any(elem in input for elem in walking_list):
         return walking()
@@ -197,6 +199,11 @@ def stylesheets(filename):
 @route('/images/<filename:re:.*\.(jpg|png|gif|ico|jpeg)>', method='GET')
 def images(filename):
     return static_file(filename, root='images')
+
+
+@route('/pics/<filename:re:.*\.(jpg|png|gif|ico|jpeg)>', method='GET')
+def images(filename):
+    return static_file(filename, root='pics')
 
 
 def main():
