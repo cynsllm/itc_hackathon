@@ -8,15 +8,38 @@ $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=tel%20aviv&APPID=13f
    });
 
 
-  $(document).ready(function () {
-        $("#myBtn").click(function(){
-            if ($(".chat-box.shadowed").css("display") === "none") {
-                $(".chat-box.shadowed").css("display", "block");
-            } else {
-                $(".chat-box.shadowed").css("display", "none")
-            }
-        });
-  });
+
+
+
+$(document).ready(function () {
+    $("#myBtn").click(function () {
+        if ($(".chat-box.shadowed").css("display") === "none") {
+            $(".chat-box.shadowed").css("display", "block");
+        } else {
+            $(".chat-box.shadowed").css("display", "none")
+        }
+    });
+    $(".cows").on("click", function () {
+        $("#info_cows").css("display", "block");
+    });
+    $(".close").on("click", function () {
+        $("#info_cows").css("display", "none");
+    });
+    $(".milk").on("click", function () {
+        $("#info_milk").css("display", "block");
+    });
+    $(".close").on("click", function () {
+        $("#info_milk").css("display", "none");
+    });
+    $(".healthy").on("click", function () {
+        $("#info_healthy").css("display", "block");
+    });
+    $(".close").on("click", function () {
+        $("#info_healthy").css("display", "none");
+    });
+});
+
+
 
 
 
