@@ -29,7 +29,7 @@ def cows_data():
             print(arr)
             print(random.choice(arr))
 
-            answer = "I think I have " + random.choice(arr)
+            answer = "I have 67% chance of having " + random.choice(arr)
             return answer
 
 
@@ -64,7 +64,7 @@ production_list = ["milk", "production"]
 
 
 def temp():
-    answer = "High: 39.2°C"
+    answer = "High, 39.2°C"
     return answer
 
 
@@ -74,6 +74,11 @@ def heart():
 
 def body():
     answer = "My body condition score is: 3/10"
+    return answer
+
+
+def feeling():
+    answer = "I'm not that good..."
     return answer
 
 
@@ -136,9 +141,9 @@ def bot_message(input):
     elif any(elem in input for elem in body_list):
         return body()
     elif any(elem in input for elem in feeling_list):
-        return cows_data()
+        return feeling()
     elif "why" in input:
-        return symptoms(input)
+        return cows_data()
     elif any(elem in input for elem in walking_list):
         return walking()
     elif any(elem in input for elem in pregnant_list):
