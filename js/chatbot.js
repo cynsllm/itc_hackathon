@@ -29,7 +29,7 @@ ChatBot.start = function () {
         ChatBot.bindErrorHandlers();
         ChatBot.initSpeechConfig();
         ChatBot.bindUserActions();
-        ChatBot.write("Hello, My name is Boto. What is yours?", "boto");
+        ChatBot.write("Hello, my name is cow!", "cow");
     });
 };
 
@@ -46,7 +46,7 @@ ChatBot.bindErrorHandlers = function () {
     if (typeof SpeechSynthesisUtterance == "undefined") {
         ChatBot.debugPrint("No speech synthesis support");
         ChatBot.speechEnabled = false;
-        $("#mute-btn").hide();
+        //$("#mute-btn").hide();
     }
 };
 
@@ -96,7 +96,7 @@ ChatBot.sendMessage = function () {
             $.post(ChatBot.SERVER_PATH + "/chat", {"msg": chatInput.val()}, function (result) {
                 if (typeof result != "undefined" && "msg" in result) {
                     ChatBot.setAnimation(result.animation);
-                    ChatBot.write(result.msg, "boto");
+                    ChatBot.write(result.msg, "cow");
                 } else {
                     //The server did not erred but we got an empty result (handling as error)
                     ChatBot.handleServerError("No result");
@@ -121,7 +121,7 @@ $.ajax("/test",{
 
 ChatBot.write = function (message, sender, emoji) {
     //Only boto's messages should be heard
-    if (sender == "boto" && ChatBot.speechEnabled) {
+    if (sender == "cow" && ChatBot.speechEnabled) {
         ChatBot.speak(message);
     }
     var chatScreen = $(".chat-screen");
@@ -150,7 +150,7 @@ ChatBot.handleServerError = function (errorThrown) {
     if (ChatBot.debugMode) {
         actualError = " ( " + errorThrown + " ) ";
     }
-    ChatBot.write("Sorry, there seems to be an error on the server. Let's talk later. " + actualError, "boto");
+    ChatBot.write("Sorry, there seems to be an error on the server. Let's talk later. " + actualError, "cow");
     ChatBot.setAnimation("crying");
     $(".chat-send").removeClass("loading");
 };

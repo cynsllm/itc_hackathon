@@ -1,18 +1,15 @@
 """
 This is the template server side for ChatBot
 """
-import bottle
+
 from bottle import route, run, template, static_file, request
 import json
 import random
 import requests
 from jokes import question_joke
-import os
 
-from sys import argv
 
-DEBUG = os.environ.get("DEBUG")
-bottle.debug(True)
+
 
 counter = 0
 
@@ -149,7 +146,7 @@ def bot_message(input):
         return start_conversation()
     elif any(elem in input for elem in end_conversation_list):
         return end_conversation()
-    elif input.startswith("how are"):
+    elif input.startswith("how is"):
         return how_are_you()
     elif "your name" in input:
         return whats_your_name()
@@ -203,8 +200,3 @@ def main():
 if __name__ == '__main__':
     main()
 
-
-#if DEBUG:
-	#bottle.run(host='localhost', port=7000)
-#else:
-	#bottle.run(host='0.0.0.0', port=argv[1])
