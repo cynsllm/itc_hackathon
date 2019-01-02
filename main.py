@@ -6,7 +6,6 @@ from bottle import route, run, template, static_file, request
 import json
 import random
 import requests
-from jokes import question_joke
 
 
 
@@ -21,7 +20,6 @@ link_list = {
 like_list = ["yes", "wow", "beautiful", "amazing", "like", "nice", "cool", "great", "good", "much", "yeah", "yep", "love"]
 dislike_list = ["no", "not", "aweful", "horrible", "bad", "nope", "dislike", "hate"]
 curse_list = ["fuck", "bitch", "shit", "piss", "dick", "asshole", "bastard", "damn"]
-joke_list = ["joke", "laugh", "fun", "smile", "story", "another", "again"]
 weather_list = ["weather", "forecast", "temp", "degree", "celcius", "sun", "cloud", "rain", "sky", "hot", "cold"]
 city_list = ["paris", "london", "tel aviv", "new york", "jerusalem", ""]
 end_conversation_list = ["bye", "see you", "to leave", "to go"]
@@ -136,8 +134,6 @@ def bot_message(input):
         return result(input)
     elif any(elem in input for elem in curse_list):
         return swear_words(input)
-    elif any(elem in input for elem in joke_list):
-        return question_joke()
     elif any(elem in input for elem in city_list):
         return weather_2(input)
     elif any(elem in input for elem in weather_list):
