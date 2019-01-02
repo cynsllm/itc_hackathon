@@ -113,9 +113,9 @@ def stylesheets(filename):
     return static_file(filename, root='css')
 
 
-@route('/images/<filename:re:.*\.(jpg|png|gif|ico)>', method='GET')
+@route('/pics/<filename:re:.*\.(jpg|png|gif|ico)>', method='GET')
 def images(filename):
-    return static_file(filename, root='images')
+    return static_file(filename, root='pics')
 
 
 def main():
