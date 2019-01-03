@@ -23,27 +23,24 @@ $(document).ready(function () {
         $("#info_cows").css("display", "block");
         $("#info_healthy").css("display", "none");
         $("#info_milk").css("display", "none");
-    });
-    $(".clos").on("click", function () {
-        $("#info_cows").css("display", "none");
+        $("#dash").css("display", "none");
     });
     $(".milk").on("click", function () {
         $("#info_milk").css("display", "block");
         $("#info_healthy").css("display", "none");
         $("#info_cows").css("display", "none");
-    });
-    $(".clos").on("click", function () {
-        $("#info_milk").css("display", "none");
+        $("#dash").css("display", "none");
+
     });
     $(".healthy").on("click", function () {
         $("#info_healthy").css("display", "block");
         $("#info_milk").css("display", "none");
         $("#info_cows").css("display", "none");
-    });
-    $(".clos").on("click", function () {
-        $("#info_healthy").css("display", "none");
+        $("#dash").css("display", "none");
+
     });
     $(".main_menu").on("click", function () {
+        $("#dash").css("display", "flex");
         $("#info_healthy").css("display", "none");
         $("#info_milk").css("display", "none");
         $("#info_cows").css("display", "none");
