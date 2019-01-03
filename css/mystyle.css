@@ -1,8 +1,10 @@
 body{
-    font-family: 'Viga', sans-serif;
     background-color: whitesmoke;
     display: flex;
     flex-direction: row
+}
+* {
+    font-family: "Oxygen-Bold", sans-serif;
 }
 .greeting{
     font-family: 'Viga', sans-serif;
@@ -47,7 +49,6 @@ body{
     position: fixed;
     bottom: 0;
     left:100px;
-    background-color: green;
     color: white;
     width: 50px;
     height: 50px;
@@ -74,8 +75,10 @@ body{
     background-size: cover;
     border-radius: 3%;
     margin-bottom: 10px;
-    margin-top: 50px
-
+    margin-top: 50px;
+    color:white;
+    position: relative;
+    
 }
 .box.cows{
     /* background-image:  url(../pics/bcow.png); */
@@ -107,11 +110,8 @@ body{
     border: 1px solid red
 }
 .text{
-color:black;
-text-align: center;
-font-size: 10px;
-width: 29%;
-height: 16%;
+font-size: 20px;
+/* height: 16%; */
 }
 
 #info_cows{
@@ -235,9 +235,7 @@ p{
 .main_menu{
     margin-left: 40px;
 }
-.lks{
-    margin-bottom: 10px;
-}
+
 .header{
     width: 100%;
     height: 130px;
@@ -247,6 +245,42 @@ p{
 }
 .cayd{
     position: absolute;
-    left: 24%;
+    left: 52px;
     top: 74%;
+    color: white;
+    font-weight: bold
+}
+.data{
+    margin-left: 5%;
+    text-align: left
+}
+.daily{
+    font-size: 10px;
+    font-weight: lighter;
+    font-style: italic
+}
+.number{
+    font-size: 30px;
+}
+.icon{
+    margin-left: 250px;
+    margin-top: 30px;
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.icow{
+    background-image: url(../pics/wcow.png);
+}
+.imilk{
+    background-image: url(../pics/wmilk.png);
+}
+.ihealth{
+    background-image: url(../pics/whealth.png);
+}
+@font-face {
+    font-family: 'Oxygen-Bold';
+    src: url('../fonts/Oxygen-Bold.ttf');
 }
