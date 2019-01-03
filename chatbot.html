@@ -27,23 +27,26 @@
 </head>
 
 <body>
-
-  <div class="navbar navbar-inverse navbar-fixed-left">
-    <a class="navbar-brand" href="#">Brand</a>
+  <div class="sidebar">
+    <div class="header">
+      <div class="logo"></div>
+      <div class="cayd">Cow are you Doing?</div>
+    </div>
     <br>
-    <ul class="nav navbar-nav">
-      <li><a class="home">Home</a></li>
-      <li><a class="cows">Cows</a></li>
-      <li><a class="milk">Milk Production</a></li>
-      <li><a class="healthy">Healthy Cows</a></li>
-      <li><a href="#">Link5</a></li>
+    <ul class="links">
+      <div id="mm"><p class="main_menu">Dashboard</p></div>
+      <hr>
+      <div id="csb"><p class="cows sb">Cows</p></div><br>
+      <div id="msb"><p class="milk sb">Milk Production</p></div><br>
+      <div id="hsb"><p class="healthy sb">Healthy Cows</p></div>
     </ul>
   </div>
-
-
   <div id="dash">
     <h1 class="hello">Hello Cynthia</h1>
-    <div class="weather"></div>
+    <div class="weather">
+      <div><img class="sun-logo" src="https://image.flaticon.com/icons/svg/1163/1163661.svg"/></div>
+      <div class="temp-text">16.7°C, partly cloudy</div>
+    </div>
     <button class="box cows">
       <div class="text"><br>Total cows: <br><br><br> 100</div>
     </button>
@@ -53,26 +56,86 @@
     <button class="box healthy">
       <div class="text"><br>Healthy cows: <br><br><br> 78</div>
     </button>
-    <div class="graph">graph</div>
-    <div class="sick">
+    <div class=" containe">
+        <h3>About My Production</h3>
+      <div class="graph">graph</div>
     </div>
-    <div id="info_cows">
-      <button class="close">X</button>
+    <div class=" containe">
+        <h3>Similar Farmers</h3>
+      <div class="matching">
+        <div class="farmer">
+          <div class="matching-img">
+            <img class="matching-pic" src="https://image.flaticon.com/icons/svg/660/660611.svg"/>
+          </div>
+          <div class="matching-text">Elie Chichportich</div>
+        </div>
+        <div class="farmer-g">
+          <div class="matching-img">
+            <img class="matching-pic" src="https://image.flaticon.com/icons/svg/660/660611.svg"/>
+          </div>
+          <div class="matching-text">Elon Cohen</div>
+        </div>
+        <div class="farmer">
+          <div class="matching-img">
+            <img class="matching-pic" src="https://image.flaticon.com/icons/svg/660/660611.svg"/>
+          </div>
+          <div class="matching-text">Elie Alloun</div>
+        </div>
+        <div class="farmer-g">
+          <div class="matching-img">
+            <img class="matching-pic" src="https://image.flaticon.com/icons/svg/660/660611.svg"/>
+          </div>
+          <div class="matching-text">Ido Zamir</div>
+        </div>
+        <div class="farmer">
+          <div class="matching-img">
+            <img class="matching-pic" src="https://image.flaticon.com/icons/svg/660/660611.svg"/>
+          </div>
+          <div class="matching-text">Moshe Melamed</div>
+        </div>
+        <div class="farmer-g">
+          <div class="matching-img">
+            <img class="matching-pic" src="https://image.flaticon.com/icons/svg/660/660611.svg"/>
+          </div>
+          <div class="matching-text">Ilona Ittah</div>
+        </div>
+        <div class="farmer">
+          <div class="matching-img">
+            <img class="matching-pic" src="https://image.flaticon.com/icons/svg/660/660611.svg"/>
+          </div>
+          <div class="matching-text">Arie Bonan</div>
+        </div>
+        <div class="farmer-g">
+          <div class="matching-img">
+            <img class="matching-pic" src="https://image.flaticon.com/icons/svg/660/660611.svg"/>
+          </div>
+          <div class="matching-text">Gabriella Blatt</div>
+        </div><div class="farmer">
+          <div class="matching-img">
+            <img class="matching-pic" src="https://image.flaticon.com/icons/svg/660/660611.svg"/>
+          </div>
+          <div class="matching-text">Remy Adda</div>
+        </div>
+        <div class="farmer-g">
+          <div class="matching-img">
+            <img class="matching-pic" src="https://image.flaticon.com/icons/svg/660/660611.svg"/>
+          </div>
+          <div class="matching-text">Olivier Nouchi</div>
+        </div>
+
+
+      </div>
+    </div>
+    
+  </div>
+  <div id="info_cows">
     </div>
     <div id="info_milk">
-      <button class="close">X</button>
     </div>
     <div id="info_healthy">
-      <button class="close">X</button>
     </div>
-  </div>
-
-<div class="cows-data">COWS DATA</div>
-  <div class="milk-data">MILK DATA</div>
-  <div class="health-data">HEALTH DATA</div>
-
   <div class="wrapper">
-    <img id="myBtn" src="./images/cow_btn.jpeg"/>
+    <img id="myBtn" src="./pics/bcow.png" />
   </div>
 
   <!-- TABLEAU -->
@@ -105,10 +168,10 @@
   <div class="chat-box shadowed">
     <!-- CHAT HEADER -->
     <div class="chat-window-header">
-        <div class="chat-user">
-            <img class="profile" src="https://image.flaticon.com/icons/svg/149/149071.svg"/>
-            <span class="name">Name</span>
-        </div>
+      <div class="chat-user">
+        <img class="profile" src="https://image.flaticon.com/icons/svg/149/149071.svg" />
+        <span class="name">Name</span>
+      </div>
 
     </div>
     <!-- BOTO PLACEHOLDER -->
@@ -117,7 +180,7 @@
     </div>
     <!-- USER INPUT -->
     <input title="Chat input" class="chat-input" />
-    <div class="chat-send clickable"><img class="send" src="https://image.flaticon.com/icons/svg/1161/1161824.svg"/></div>
+    <div class="chat-send clickable"><img class="send" src="https://image.flaticon.com/icons/svg/1161/1161824.svg" /></div>
   </div>
 
 

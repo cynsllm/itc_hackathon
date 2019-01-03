@@ -143,13 +143,13 @@ body{
     vertical-align: middle;
     float: right;
     margin-top: 6px;
-    background-image:url('../images/mute_off.png');
+    background-image:url('../pics/mute_off.png');
     background-repeat:no-repeat;
     background-size:contain;
 }
 
 #mute-btn.on, #mute-btn:hover{
-    background-image:url('../images/mute_on.png') ; 
+    background-image:url('../pics/mute_on.png') ; 
 }
 
 .copyright{

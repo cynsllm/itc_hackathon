@@ -6,7 +6,6 @@ from bottle import route, run, template, static_file, request
 import json
 import random
 import pymysql
-import requests
 
 connection = pymysql.connect(host='localhost',
                              user='root',
