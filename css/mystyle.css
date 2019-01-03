@@ -169,3 +169,13 @@ height: 16%;
 .navbar-brand{
     background-color: blue
 }
+
+.cows-data{
+display: none;
+}
+.milk-data{
+display: none;
+}
+.health-data{
+display: none;
+}
