@@ -242,10 +242,11 @@ p{
     width: 100%;
     height: 130px;
     background-color: #408BEA;
-    margin: 0px
+    margin: 0px;
+    position: relative
 }
 .cayd{
     position: absolute;
-    left: 4%;
-    top: 18%
+    left: 24%;
+    top: 74%;
 }
