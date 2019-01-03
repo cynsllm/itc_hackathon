@@ -32,6 +32,9 @@ ChatBot.bindErrorHandlers = function () {
     $(document).ajaxError(function (event, jqxhr, settings, thrownError) {
         ChatBot.handleServerError(thrownError);
     });
+
+
+
     //Checking speech synthesis support
     if (typeof SpeechSynthesisUtterance == "undefined") {
         ChatBot.debugPrint("No speech synthesis support");
@@ -47,16 +50,19 @@ ChatBot.bindUserActions = function () {
             ChatBot.sendMessage();
         }
     });
+
     $(".chat-send").unbind("click").bind("click", function (e) {
         ChatBot.sendMessage();
     });
+
     //Mute button will toggle the speechEnabled indicator (when set to false the speak method will not be called)
     $("#mute-btn").unbind("click").bind("click", function (e) {
         $(this).toggleClass("on");
         ChatBot.speechEnabled = $(this).is(".on") ? false : true;
     });
 };
-//Initializeing HTML5 speech synthesis config
+
+//Initializeing HTML5 speech synthesis config 
 ChatBot.initSpeechConfig = function () {
     if (ChatBot.speechEnabled) {
         ChatBot.speechConfig = new SpeechSynthesisUtterance();
@@ -80,7 +86,7 @@ ChatBot.sendMessage = function () {
             sendBtn.addClass("loading");
             ChatBot.write(chatInput.val(), "me");
             //Sending the user line to the server using the POST method
-            $.post(ChatBot.SERVER_PATH + "/chat", { "msg": chatInput.val() }, function (result) {
+            $.post(ChatBot.SERVER_PATH + "/chat", {"msg": chatInput.val()}, function (result) {
                 if (typeof result != "undefined" && "msg" in result) {
                     //ChatBot.setAnimation(result.animation);
                     ChatBot.write(result.msg, "cow");
@@ -95,12 +101,11 @@ ChatBot.sendMessage = function () {
     }
 };
 
-$.ajax("/test", {
+$.ajax("/test",{
     type: "POST",
-    data: { "msg": "hello" },
+    data: {"msg": "hello"},
     dataType: "json",
-    contentType: "application/json"
-})
+    contentType: "application/json"})
     .done(function (data) {
         console.log(data);
     });
@@ -108,7 +113,7 @@ $.ajax("/test", {
 
 
 ChatBot.write = function (message, sender, emoji) {
-    if (sender == "me") {
+    if(sender == "me"){
         if (sender == "cow" && ChatBot.speechEnabled) {
             ChatBot.speak(message);
         }
@@ -121,7 +126,7 @@ ChatBot.write = function (message, sender, emoji) {
     }
     //Only boto's messages should be heard
 
-    else {
+    else{
         if (ChatBot.speechEnabled) {
             ChatBot.speak(message);
         }
@@ -133,6 +138,7 @@ ChatBot.write = function (message, sender, emoji) {
         chatScreen.append(newLine);
     }
 };
+
 
 ChatBot.speak = function (msg) {
     $("#speak-indicator").removeClass("hidden");

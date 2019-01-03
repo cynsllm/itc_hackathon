@@ -10,12 +10,15 @@ $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=tel%20aviv&APPID=13f
   $(".humid").text(humid + "%")
    });
 
-
-
-
-
 $(document).ready(function () {
     $("#myBtn").click(function () {
+        if ($(".chat-box.shadowed").css("display") === "none") {
+            $(".chat-box.shadowed").css("display", "block");
+        } else {
+            $(".chat-box.shadowed").css("display", "none")
+        }
+    });
+    $("#myBtn1").click(function () {
         if ($(".chat-box.shadowed").css("display") === "none") {
             $(".chat-box.shadowed").css("display", "block");
         } else {
@@ -48,10 +51,12 @@ $(document).ready(function () {
         $("#info_milk").css("display", "none");
         $("#info_cows").css("display", "none");
     });
+     $(".logo").on("click", function () {
+        $("#dash").css("display", "flex");
+        $("#info_healthy").css("display", "none");
+        $("#info_milk").css("display", "none");
+        $("#info_cows").css("display", "none");
+    });
 });
 
 
-
-var scriptElement = document.createElement('script');
-scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-vizElement.parentNode.insertBefore(scriptElement, vizElement);

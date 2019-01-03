@@ -41,22 +41,23 @@ body{
 .wrapper {
     text-align: center;
     position: relative;
+    display:flex;
+        margin-left: 20px;
 }
 #myBtn {
-    position: fixed;
-    bottom: 0;
-    left:100px;
     color: white;
     width: 50px;
     height: 50px;
-    font-size: 100%
+    font-size: 100%;
+    margin-top: 80px;
+        margin-right: 10px;
 }
 
 #dash{
     /* margin: 10px; */
     /* border: 1px solid black; */
     width: 100%;
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -72,7 +73,7 @@ body{
     background-size: cover;
     border-radius: 3%;
     margin-bottom: 10px;
-    margin-top: 50px;
+    margin-top: 30px;
     color:white;
     position: relative;
     
@@ -93,9 +94,8 @@ body{
 }
 .graph{
     margin: 10px;
-    width: 771px;
-    height: 433px;
-    background-image:  url(../pics/graph.png);
+    width: 700px;
+    height: 400px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,7 +103,7 @@ body{
 .matching{
     margin: 10px;
     width: 374px;
-    height: 433px;
+    height: 400px;
     background-color: lightblue;
     overflow: scroll;
 }
@@ -133,6 +133,7 @@ border: 2px solid rgb(23, 105, 255);
     width: 40px;
     margin-top: 15px;
     margin-left: 30px;
+    border-radius:50%
 }
 .matching-text{
     position: absolute;
@@ -147,7 +148,6 @@ font-size: 20px;
 #info_cows{
     width: 83.5%;
     height: 110%;
-    background-color: rgb(104, 3, 3);
     display: none;
     position: absolute;
     left: 16.7%;
@@ -155,7 +155,6 @@ font-size: 20px;
 #info_milk{
     width: 83.5%;
     height: 110%;
-    background-color: rgb(104, 3, 3);
     display: none;
     position: absolute;
     left: 16.7%;
@@ -163,7 +162,6 @@ font-size: 20px;
 #info_healthy{
     width: 83.5%;
     height: 110%;
-    background-color: rgb(0, 3, 3);
     display: none;
     position: absolute;
     left: 16.7%;
@@ -171,8 +169,8 @@ font-size: 20px;
 .hello{
     width: 50%;
     text-align: left;
-    padding-left: 13px;
-    margin-top: 50px;
+    padding-left: 50px;
+    margin-top: 30px;
 
 }
 .weather{
@@ -180,13 +178,14 @@ font-size: 20px;
     font-size:20px;
     padding-right: 15px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
      display: flex;
 }
 .sidebar{
-    width: 20%;
+    width: 240px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 .clos {
     float: right;
@@ -202,7 +201,7 @@ font-size: 20px;
 .logo{
     width: 50px;
     height: 50px;
-    background-image:url(../pics/logo.png);
+    background-image:url(../pics/logo_color.png);
     margin-left: 97px;
     margin-top: 16px;
     background-position: center;
@@ -269,7 +268,7 @@ p{
 }
 
 .header{
-    width: 100%;
+    width: 240px;
     height: 130px;
     background-color: #408BEA;
     margin: 0px;
@@ -288,7 +287,7 @@ p{
 }
 .daily{
     font-size: 10px;
-    font-weight: lighter;
+    font-family: 'Oxygen-Light';
     font-style: italic
 }
 .number{
@@ -320,3 +319,37 @@ p{
     font-family: 'Oxygen-Bold';
     src: url('../fonts/Oxygen-Bold.ttf');
 }
+
+@font-face {
+    font-family: 'Oxygen-Light';
+    src: url('../fonts/Oxygen-Light.ttf');
+}
+
+.dash-container{
+    height: 500px;
+    width: 1000px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+.title{
+    margin-top: 50px;
+    padding-left: 50px;
+}
+h3{
+padding-left:10px;
+}
+.main_menu:hover, .sb:hover{
+color:rgb(23, 105, 255);
+}
+
+.contact{
+margin-top:90px;
+}
+.contact1{
+margin-top:10px;
+}
+
+.myBtn1{
+    width: 50px;
+    margin-right: 10px;
+    }

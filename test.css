@@ -1,3 +1,7 @@
+body{
+    background:blue; 
+    font-family:'Roboto Mono'
+}
 .clickable{
 	cursor:pointer;
 }
@@ -7,7 +11,7 @@
 .shadowed{
  -webkit-box-shadow: 3px 3px 23px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    3px 3px 23px 0px rgba(50, 50, 50, 0.75);
-		 box-shadow:         3px 3px 23px 0px rgba(50, 50, 50, 0.75);
+		 box-shadow:         3px 3px 23px 0px rgba(50, 50, 50, 0.75);	
 }
 .chat-box{
 	display: inline-block;
@@ -56,7 +60,6 @@
     top: 25px;
     left: 100px;
     color: white;
-    padding-left: 20px;
 }
 .msg-row{
     background-color: #a2e6f4;
@@ -96,7 +99,7 @@
     width: 40px;
 }
 .profile {
-    width: 80px;
+    width: 50px;
     margin-top: 15px;
     margin-left: 20px;
     border-radius: 30px;
@@ -123,7 +126,7 @@
     background-size:contain;
 }
 #mute-btn.on, #mute-btn:hover{
-    background-image:url('../pics/mute_on.png') ;
+    background-image:url('../pics/mute_on.png') ; 
 }
 .copyright{
     position: fixed;
@@ -131,4 +134,3 @@
     left: 0px;
     margin: 5px;
 }
-
