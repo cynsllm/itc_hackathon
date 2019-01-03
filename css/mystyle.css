@@ -18,13 +18,10 @@ body{
     right: 250px;
 }
 
-.temp{
-    margin-top: 20px;
-    position: absolute;
-    right: 180px;
-    font-family: 'Viga', sans-serif;
-    font-size: 20px;
+.temp-text{
+   margin: 10px;
 }
+
 
 .date{
     margin-top: 40px;
@@ -103,11 +100,44 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.sick{
+.matching{
     margin: 10px;
     width: 374px;
     height: 433px;
-    border: 1px solid red
+    background-color: lightblue;
+    overflow: scroll;
+}
+.matching-header{
+    border: 1px solid black;
+    height: 60px;
+ }
+.farmer{
+    height: 70px;
+    position: relative;
+    background-color: white;
+}
+.farmer:hover{
+border: 2px solid rgb(23, 105, 255);
+}
+.farmer-g{
+    height: 70px;
+    position: relative;
+    background-color: rgb(246, 246, 246);
+}
+.farmer-g:hover{
+    height: 70px;
+    position: relative;
+    border: 2px solid rgb(23, 105, 255);
+}
+.matching-pic{
+    width: 40px;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+.matching-text{
+    position: absolute;
+    top: 25px;
+    left: 100px;
 }
 .text{
 font-size: 20px;
@@ -148,9 +178,10 @@ font-size: 20px;
 .weather{
     width: 50%;
     font-size:20px;
-    margin-top:26px;
-    text-align: right;
     padding-right: 15px;
+    text-align: center;
+    margin-top: 50px;
+     display: flex;
 }
 .sidebar{
     width: 20%;
@@ -214,6 +245,7 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 #msb{
     width: 15px;
     height: 15px;
@@ -279,6 +311,10 @@ p{
 }
 .ihealth{
     background-image: url(../pics/whealth.png);
+}
+.sun-logo{
+    width: 50px;
+    margin-left: 100px;
 }
 @font-face {
     font-family: 'Oxygen-Bold';

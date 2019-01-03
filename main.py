@@ -6,7 +6,6 @@ from bottle import route, run, template, static_file, request
 import json
 import random
 import pymysql
-import requests
 
 # connection = pymysql.connect(host='localhost',
 #                              user='root',
@@ -14,8 +13,8 @@ import requests
 #                              db='cows',
 #                              charset='utf8',
 #                              cursorclass=pymysql.cursors.DictCursor)
-
-
+#
+#
 #
 # def cows_data():
 #         with connection.cursor() as cursor:
@@ -47,8 +46,8 @@ import requests
 #         print(symptom)
 #         answer = "Because I have: " + symptom
 #         return answer
-
-
+#
+#
 #
 # heart_list = ["heart", "beat", "beating", "heartbeat", "heartrate", "rate"]
 # body_list = ["body condition", "body", "condition"]
@@ -60,11 +59,13 @@ import requests
 # pregnant_list = ["baby", "pregnant", "pregnancy"]
 # walking_list = ["steps", "step", "walk", "walking", "out", "outside"]
 # production_list = ["milk", "production"]
+# temp_list = ["temp", "temperature", "fever"]
+# sick_list = ["serious", "doctor", "vet", "medicines", "injection"]
 #
 #
 #
 # def temp():
-#     answer = "High, 39.2°C"
+#     answer = "My temperature is high, 39.2°C"
 #     return answer
 #
 #
@@ -121,20 +122,30 @@ import requests
 #     return answer
 #
 #
-# def error_message():
-#     answer_list = ["Sorry, I can't help you.", "Sorry, I think I cannot help you.", "Sorry, ask another robot who may help you!"]
-#     return random.choice(answer_list)
+# def meu():
+#     answer = "Meuuuuuuuuuuuuuuuuuuuuuu"
+#     return answer
 #
-# def not_english():
-#     answer_list = ["What is that language?", "Sorry, I speak english only!", "Go talk to another robot which speaks your weird language!"]
-#     return random.choice(answer_list)
+#
+# def sick():
+#     answer = "Yes, call a doctor please..."
+#     return answer
+#
+# def error_message():
+#     answer_list = "What do you mean ?"
+#     return answer_list
+#
 #
 #
 # def bot_message(input):
 #     input = input.lower()
 #     if any(elem in input for elem in greeting_list):
 #         return greeting()
-#     elif "temperature" or "temp" in input:
+#     elif input.startswith("how are"):
+#         return feeling()
+#     elif input.startswith("why"):
+#         return cows_data()
+#     elif any(elem in input for elem in temp_list):
 #         return temp()
 #     elif any(elem in input for elem in heart_list):
 #         return heart()
@@ -142,10 +153,10 @@ import requests
 #         return body()
 #     elif any(elem in input for elem in feeling_list):
 #         return feeling()
-#     elif "why" in input:
-#         return cows_data()
 #     elif "sick" in input:
 #         return cows_data()
+#     elif any(elem in input for elem in sick_list):
+#         return sick()
 #     elif any(elem in input for elem in walking_list):
 #         return walking()
 #     elif any(elem in input for elem in pregnant_list):
@@ -162,11 +173,13 @@ import requests
 #         return do()
 #     elif "insemination" in input:
 #         return insemination(input)
+#     elif input.startswith("meu"):
+#         return meu()
 #     else:
 #         return error_message()
-
-
-
+#
+#
+#
 
 @route('/', method='GET')
 def index():

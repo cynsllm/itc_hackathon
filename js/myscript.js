@@ -1,7 +1,10 @@
-$.getJSON("http://api.openweathermap.org/data/2.5/weather?q=tel%20aviv&APPID=13f1f80994cd71ca577de534eddb82af&units=metric%22", function( data ) {
+$.getJSON("http://api.openweathermap.org/data/2.5/weather?q=tel%20aviv&APPID=13f1f80994cd71ca577de534eddb82af&units=metric", function( data ) {
    console.log(data);
    var city = data.name;
   var temp = data.main.temp;
+  //var temp = data.main.temp - 273;
+  //var rounded = temp.toFixed(1);
+  //console.log(rounded)
   var humid = data.main.humidity;
   $(".temp").text(temp)
   $(".humid").text(humid + "%")
@@ -46,10 +49,6 @@ $(document).ready(function () {
         $("#info_cows").css("display", "none");
     });
 });
-
-
-
-
 
 
 

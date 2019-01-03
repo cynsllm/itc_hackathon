@@ -2,30 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a32b4e4d-07ad-4540-9ced-0ee87f24aac7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pics/Blue3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/Green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/Meteo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/Orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/bcow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/bhcow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/blue2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/bmilk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/ccow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/cow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/cow2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/cross.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/graph.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/happy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/milk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/milk2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pics/c1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pics/c2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pics/c3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pics/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pics/speedometer.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatbot.html" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/chatbot.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/chatbot.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mystyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cloud_icon.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/pics/cloud_icon.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cow_btn.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/pics/cow_btn.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cow_incon.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/pics/cow_incon.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/chatbot.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/chatbot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/myscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/myscript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -37,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="206" lean-forward="true" selection-start-line="206" selection-end-line="206" />
+            <state relative-caret-position="-719">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#54#115#0" expanded="true" />
               </folding>
@@ -52,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/chatbot.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1514">
-              <caret line="137" column="10" lean-forward="true" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="10" />
+            <state relative-caret-position="300">
+              <caret line="114" column="4" lean-forward="true" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -61,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/chatbot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="878">
-              <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
+            <state relative-caret-position="1122">
+              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
             </state>
           </provider>
         </entry>
@@ -70,22 +55,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chatbot.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="256">
+              <caret line="47" column="22" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/myscript.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="382">
+              <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -101,21 +90,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>boto</find>
-      <find>tableau</find>
-      <find>how</find>
-      <find>setanimat</find>
-      <find>write</find>
-      <find>container</find>
-      <find>nav</find>
-      <find>form</find>
-      <find>mybtn</find>
-      <find>WEATHER</find>
-      <find>font</find>
-      <find>hello</find>
-      <find>SPAN</find>
       <find>me</find>
-      <find>temp</find>
       <find>msg</find>
       <find>#65b20c</find>
       <find>/chat</find>
@@ -129,8 +104,22 @@
       <find>PROFILE</find>
       <find>cow</find>
       <find>profile</find>
-      <find>HEAD</find>
       <find>MEUU</find>
+      <find>bot-msg</find>
+      <find>HEAD</find>
+      <find>SENDER</find>
+      <find>li</find>
+      <find>sick</find>
+      <find>match</find>
+      <find>similar</find>
+      <find>flex</find>
+      <find>fa</find>
+      <find>matching-pic</find>
+      <find>#</find>
+      <find>sun</find>
+      <find>weather</find>
+      <find>chat-input</find>
+      <find>temp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,12 +136,12 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/../PycharmProjects/api/index.html" />
         <option value="$PROJECT_DIR$/boto.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/css/chatbot.css" />
         <option value="$PROJECT_DIR$/js/chatbot.js" />
+        <option value="$PROJECT_DIR$/css/chatbot.css" />
         <option value="$PROJECT_DIR$/js/myscript.js" />
-        <option value="$PROJECT_DIR$/css/mystyle.css" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/chatbot.html" />
+        <option value="$PROJECT_DIR$/css/mystyle.css" />
       </list>
     </option>
   </component>
@@ -214,6 +203,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pics" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -374,20 +368,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15151516" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15151516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64341086" visible="true" weight="0.27228916" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49964765" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.64270616" visible="true" weight="0.119277105" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49964765" weight="0.08313253" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32771084" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.35658914" side_tool="true" visible="true" weight="0.27228916" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.35729387" side_tool="true" visible="true" weight="0.119277105" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.10722891" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -501,44 +496,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/chatbot.css">
+    <entry file="file://$PROJECT_DIR$/js/chatbot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1514">
-          <caret line="137" column="10" lean-forward="true" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/mystyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="1122">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/myscript.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/chatbot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="878">
-          <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatbot.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="486">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="206" lean-forward="true" selection-start-line="206" selection-end-line="206" />
+        <state relative-caret-position="-719">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#54#115#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/chatbot.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="114" column="4" lean-forward="true" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chatbot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mystyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
         </state>
       </provider>
     </entry>
